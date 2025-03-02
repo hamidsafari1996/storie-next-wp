@@ -15,27 +15,6 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * Get post subtitle from post meta
- *
- * Retrieves the subtitle custom field for a post. This function can be used
- * in templates to display the subtitle.
- *
- * @since 1.0.0
- * @param array|int $post Post object or post ID
- * @return string The post subtitle or empty string if not found
- */
-function get_post_subtitle($post) {
-	// Handle both post object and post ID
-	$post_id = is_array($post) && isset($post['id']) ? $post['id'] : (is_numeric($post) ? $post : 0);
-	
-	if (!$post_id) {
-		return '';
-	}
-	
-	return get_post_meta($post_id, 'yourprefix_subtitle', true) ?: '';
-}
-
-/**
  * Add CORS headers to allow cross-origin requests
  *
  * Sets appropriate headers to enable cross-origin resource sharing (CORS).
