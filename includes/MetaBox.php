@@ -73,7 +73,3 @@ class Metabox {
 		));
 	}
 }
-
-// Note: This direct initialization should be removed and handled in the main plugin file
-// to prevent duplicate initialization and allow the autoloader to work properly
-Metabox::init();

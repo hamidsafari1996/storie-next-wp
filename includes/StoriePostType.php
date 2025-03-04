@@ -86,7 +86,3 @@ class Storie_Post_Type {
 		);
 	}
 }
-
-// Don't call init() here - it should be called from the main plugin file
-// This prevents duplicate initialization and allows the autoloader to work properly
-// Storie_Post_Type::init();
